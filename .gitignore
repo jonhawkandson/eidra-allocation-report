@@ -1,0 +1,14 @@
+# Float data (raw API responses — potentially sensitive)
+data/
+
+# Python scripts and cache
+*.py
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
