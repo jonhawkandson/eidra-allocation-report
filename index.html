@@ -139,15 +139,18 @@ table{border-collapse:collapse;width:100%;background:#fff;
 <body>
 
 <nav id="topnav">
-  <!-- Row 1: title + opco switcher -->
+  <!-- Row 1: logos + opco switcher -->
   <div class="nav-row">
-    <span class="nav-title">Eidra Allocation Report</span>
+    <img src="https://directus-powgs7hfmq-ez.a.run.app/assets/c3eec80a-e82f-4705-9854-49a6f7a65842"
+         alt="Eidra" height="22" style="flex-shrink:0;filter:brightness(0) invert(1);margin-right:4px">
     <div class="nav-sep"></div>
     <select id="opco-select" onchange="showOpco(this.value)"><option value="eidra-consulting-se">EC SE</option><option value="above-se">Above SE</option><option value="frojd-se">Fröjd SE</option><option value="curamando-se">Curamando SE</option><option value="conversionista-se">Conversionista SE</option><option value="curious-mind-se">Curious Mind SE</option><option value="fabrique-nl">Fabrique NL</option><option value="q42-nl">Q42 NL</option><option value="eidra-consulting-nl">EC NL</option><option value="eidra-dach">Eidra DACH</option><option value="umain-se">Umain SE</option><option value="umain-no">Umain NO</option><option value="umain-us">Umain US</option><option value="eidra-no">Eidra NO</option><option value="essense-nl">Essense NL</option></select>
     <span id="report-updated" style="
-      margin-left:auto;font-size:10px;color:#aaa;
-      white-space:nowrap;flex-shrink:0;padding-left:16px">
-      Float sync 2026-06-30 16:24 CEST
+      margin-left:auto;display:flex;align-items:center;gap:8px;
+      font-size:10px;color:#aaa;white-space:nowrap;flex-shrink:0;padding-left:16px">
+      <img src="https://cdn.prod.website-files.com/65efdf52a39c7b2ca4035c98/679bae77afeacfae86281e69_Color%3Dfluro%2C%20State%3Dlogo.svg"
+           alt="Float" height="14" style="flex-shrink:0;opacity:0.7">
+      Float sync 2026-06-30 16:29 CEST
     </span>
   </div>
   <!-- Row 2: slide nav for active opco -->
