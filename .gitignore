@@ -3,6 +3,7 @@ data/
 
 # Python scripts and cache
 *.py
+!eidra_opco_config.py
 __pycache__/
 *.pyc
 *.pyo
@@ -12,3 +13,6 @@ __pycache__/
 
 # Editor
 .vscode/
+
+# Staticrypt password — never commit this
+.report_password
