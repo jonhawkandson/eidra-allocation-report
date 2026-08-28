@@ -40,6 +40,7 @@ OPCOS = {
             "BrandComm":  {"ids": [16963441], "label": "Brand & Communication",     "color": _P[3]},
             "Commerce":   {"ids": [16963442], "label": "Commerce & AI",             "color": _P[4]},
             "Sustain":    {"ids": [16963444], "label": "Sustainability",            "color": _P[5]},
+            "TechProd":   {"ids": [16969559], "label": "Tech & Product",            "color": _P[7]},
             "General":    {"ids": [16963437], "label": "Eidra Consulting SE",       "color": _P[6]},
         },
         "exclude_dept_ids": [16963443],   # Management (EC SE)
@@ -146,6 +147,7 @@ OPCOS = {
             "ExpertCons": {"ids": [16963216], "label": "Expert Consulting",   "color": _P[0]},
             "Insights":   {"ids": [16963574], "label": "Insights Team",       "color": _P[1]},
             "Advisory":   {"ids": [16963218], "label": "Advisory Consulting", "color": _P[2]},
+            "DataQual":   {"ids": [16969904], "label": "Data Quality",        "color": _P[4]},
             "General":    {"ids": [16963217], "label": "Conversionista SE",   "color": _P[3]},
         },
         "exclude_dept_ids": [16963219],   # Management (Conversionista SE)
