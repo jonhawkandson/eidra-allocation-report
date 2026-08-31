@@ -124,9 +124,14 @@ OPCOS = {
             "BizCons":  {"ids": [16963223], "label": "Business Consulting",   "color": _P[2]},
             "Advisory": {"ids": [16963271], "label": "Advisory Consulting",   "color": _P[3]},
             "CommTeam": {"ids": [16963224], "label": "Core Commercial Team",  "color": _P[4]},
+            # Dept 16963222 was "Project Management" — renamed in Float (~2026-08)
+            # to "AI Core" and repopulated with a new practice team (10 of 11
+            # people moved in during the week of 2026-08-31). Promoted from
+            # exclude_dept_ids to its own group as of 2026-08-31.
+            "AICore":   {"ids": [16963222], "label": "AI Core",               "color": _P[9]},
             "General":  {"ids": [16944146], "label": "Curamando SE",          "color": _P[5]},
         },
-        "exclude_dept_ids": [16963222, 16963273],  # Project Management, Management
+        "exclude_dept_ids": [16963273],  # Management
         "role_level_map": {
             342850: "L1",
             342848: "L2",
@@ -134,6 +139,29 @@ OPCOS = {
             342846: "L4",
             342847: "L5",
             342849: "L6",
+        },
+    },
+
+    # ──────────────────────────────────────────────────────────────────────────
+    # New opco discovered in Float as of 2026-08-31 — not yet migrated fully
+    # (2 people still sit directly on the top-level dept with no sub-dept).
+    "curamando-nl": {
+        "display_name": "Curamando NL",
+        "short_name":   "Curamando NL",
+        "color":        "#2E9E86",
+        "dept_id":      16961813,
+        "groups": {
+            "AI":       {"ids": [16963733], "label": "AI",                 "color": _P[0]},
+            "CommGrowth": {"ids": [16963734], "label": "Commerce & Growth", "color": _P[1]},
+            "General":  {"ids": [16961813], "label": "Curamando NL",        "color": _P[2]},
+        },
+        "exclude_dept_ids": [],
+        "role_level_map": {
+            290405: "L1",
+            290404: "L2",
+            290401: "L3",
+            290400: "L4",
+            290399: "L5",
         },
     },
 
@@ -335,17 +363,32 @@ OPCOS = {
 
     # ──────────────────────────────────────────────────────────────────────────
     # Float name is "Essense" — display as "Essense NL" per user request
+    # Restructured into 7 sub-departments in Float as of 2026-08-31 (was a
+    # single flat team before). role_level_map only covers L2/L3/L4/L6 —
+    # those are the only Essense role_ids observed in the data so far; L1/L5
+    # will need adding once someone with those roles shows up.
     "essense-nl": {
         "display_name": "Essense NL",
         "short_name":   "Essense NL",
         "color":        "#8A1B4A",
         "dept_id":      16961815,
         "groups": {
-            "Essense NL": {"ids": [16961815], "label": "Essense NL", "color": _P[0]},
+            "ServiceDesign": {"ids": [16966211], "label": "Service Design",     "color": _P[0]},
+            "ExpDesign":     {"ids": [16966212], "label": "Experience Design",  "color": _P[1]},
+            "CXConsulting":  {"ids": [16966213], "label": "CX Consulting",      "color": _P[2]},
+            "ClientMgmt":    {"ids": [16968070], "label": "Client Management",  "color": _P[3]},
+            "NewBiz":        {"ids": [16968071], "label": "New Business",       "color": _P[4]},
+            "Marketing":     {"ids": [16968072], "label": "Marketing",          "color": _P[5]},
+            "Operations":    {"ids": [16968075], "label": "Operations",         "color": _P[6]},
+            "General":       {"ids": [16961815], "label": "Essense NL",         "color": _P[7]},
         },
         "exclude_dept_ids": [],
         "role_level_map": {
             288133: "Consultant",  # Generic "Consultant" role
+            351677: "L2",
+            351678: "L3",
+            351679: "L4",
+            351681: "L6",
         },
     },
 
@@ -357,6 +400,7 @@ OPCO_ORDER = [
     "above-se",
     "frojd-se",
     "curamando-se",
+    "curamando-nl",
     "conversionista-se",
     "curious-mind-se",
     "fabrique-nl",
