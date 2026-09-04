@@ -392,6 +392,30 @@ OPCOS = {
         },
     },
 
+    # ──────────────────────────────────────────────────────────────────────────
+    # New opco discovered in Float as of 2026-09-04 — Jon confirmed this should
+    # be added, more people expected in the coming days. Only 2 people so far
+    # (Matt Wakeman under Tech, Paul Harrop moved in from Umain SE under
+    # Management), neither with a role_id set yet. Not excluding Management
+    # (Eidra UK) the way other opcos exclude their Management dept — too early
+    # to tell if it'll stay a small leadership team or become a real working
+    # group; revisit once headcount grows.
+    "eidra-uk": {
+        "display_name": "Eidra UK",
+        "short_name":   "Eidra UK",
+        "color":        "#00247D",
+        "dept_id":      16972503,
+        "groups": {
+            "Tech":       {"ids": [16972504], "label": "Tech",                        "color": _P[0]},
+            "ProdPM":     {"ids": [16972505], "label": "Product & Project Management", "color": _P[1]},
+            "Design":     {"ids": [16972506], "label": "Design",                      "color": _P[2]},
+            "Management": {"ids": [16972507], "label": "Management",                  "color": _P[3]},
+            "General":    {"ids": [16972503], "label": "Eidra UK",                    "color": _P[4]},
+        },
+        "exclude_dept_ids": [],
+        "role_level_map": {},   # No role_ids observed yet — both current people have role_id=None
+    },
+
 }
 
 # ── Ordered list of opco keys for nav display ─────────────────────────────────
@@ -412,6 +436,7 @@ OPCO_ORDER = [
     "umain-us",
     "eidra-no",
     "essense-nl",
+    "eidra-uk",
 ]
 
 # ── Generic role fallback (used when role_id not in opco's role_level_map) ────
